@@ -7,4 +7,4 @@ M. Ainurrahman - 1611510015
 # Screenshoot
 
 -> POST 
-![Optional Text](../screenshoot/POST.png)
+![alt text](https://github.com/enobyte/UTS_J2EE/blob/master/screenshoot/POST.png)
