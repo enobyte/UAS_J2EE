@@ -4,6 +4,9 @@ UTS Java Web Enterprise - Kelas Malam
 # MAHASISWA
 M. Ainurrahman - 1611510015
 
+# Database (.SQL)
+downloaded [here](https://github.com/enobyte/UTS_J2EE/blob/master/utsDB.sql)
+
 # Screenshoot
 
 ### POST 
