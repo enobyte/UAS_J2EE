@@ -26,5 +26,5 @@ Mysql -> 8.0.16
 
 ### How to Run
 - import utsDB.sql -> Mysql
-- open Project to IntelliJ IDE (or whatever u have IDE :D)
+- open Project to IntelliJ IDEA (or whatever u have IDE :D)
 - RUN |> 
