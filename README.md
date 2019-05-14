@@ -21,3 +21,10 @@ downloaded [here](https://github.com/enobyte/UTS_J2EE/blob/master/utsDB.sql)
 ### DELETE 
 ![alt text](https://github.com/enobyte/UTS_J2EE/blob/master/screenshoot/DELETE.png)
 
+# Enviroment
+Mysql -> 8.0.16
+
+### How to Run
+- import utsDB.sql -> Mysql
+- open Project to IntelliJ IDE (or whatever u have IDE :D)
+- RUN |> 
