@@ -9,12 +9,11 @@ downloaded [here](https://github.com/enobyte/UTS_J2EE/blob/master/utsDB.sql)
 
 # Screenshoot
 
-### POST 
-
-![alt text](https://github.com/enobyte/UTS_J2EE/blob/master/screenshoot/POST.png)
-
-### GET 
+### GET
 ![alt text](https://github.com/enobyte/UTS_J2EE/blob/master/screenshoot/GET.png)
+
+### POST 
+![alt text](https://github.com/enobyte/UTS_J2EE/blob/master/screenshoot/POST.png)
 
 ### PUT 
 ![alt text](https://github.com/enobyte/UTS_J2EE/blob/master/screenshoot/PUT.png)
