@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.16, for osx10.14 (x86_64)
 --
--- Host: localhost    Database: utsDB
+-- Host: localhost    Database: uasDB
 -- ------------------------------------------------------
 -- Server version	8.0.16
 
@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `books`
+--
+
+DROP TABLE IF EXISTS `books`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `books` (
+  `id` int(11) NOT NULL,
+  `kd_kategori` varchar(100) DEFAULT NULL,
+  `title` varchar(100) DEFAULT NULL,
+  `stok` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `books_categories_FK` (`kd_kategori`),
+  CONSTRAINT `books_categories_FK` FOREIGN KEY (`kd_kategori`) REFERENCES `categories` (`kd_kategori`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `books`
+--
+
+LOCK TABLES `books` WRITE;
+/*!40000 ALTER TABLE `books` DISABLE KEYS */;
+INSERT INTO `books` VALUES (47,'kd003','biologi',50);
+/*!40000 ALTER TABLE `books` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `categories`
 --
 
@@ -23,14 +51,15 @@ DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `categories` (
-  `id` int(11) NOT NULL,
-  `kd_kategori` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `nama` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `keterangan` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `create_at` datetime DEFAULT NULL,
-  `update_at` datetime DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `id` int(11) DEFAULT NULL,
+  `kd_kategori` varchar(100) NOT NULL,
+  `nama` varchar(100) DEFAULT NULL,
+  `keterangan` varchar(100) DEFAULT NULL,
+  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`kd_kategori`),
+  UNIQUE KEY `UK_p47bjxbnjomks3gs8mk5bsern` (`kd_kategori`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +68,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
-INSERT INTO `categories` VALUES (0,'Kd001','sastra','buku sastra','2019-05-14 10:11:30','2019-05-14 10:11:45'),(1,'Kd199','sastra pembaharuan','buku sastra OK','2020-05-14 10:11:30','2021-05-14 10:11:45'),(3,'Kd002','sastra pembaharuan','buku sastra','2019-05-14 10:11:30','2019-05-14 10:11:45');
+INSERT INTO `categories` VALUES (0,'Kd001','sastra','buku sastra','2019-06-16 20:41:53','2019-06-16 20:41:53'),(1,'Kd002','sejarah','buku sejarah','2019-06-16 20:42:32','2019-06-16 20:42:32'),(1,'Kd003','biologi','buku biologi','2019-06-17 03:42:32','2019-06-17 03:42:32');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -52,7 +81,7 @@ DROP TABLE IF EXISTS `hibernate_sequence`;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `hibernate_sequence` (
   `next_val` bigint(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,9 +90,13 @@ CREATE TABLE `hibernate_sequence` (
 
 LOCK TABLES `hibernate_sequence` WRITE;
 /*!40000 ALTER TABLE `hibernate_sequence` DISABLE KEYS */;
-INSERT INTO `hibernate_sequence` VALUES (7);
+INSERT INTO `hibernate_sequence` VALUES (49),(49);
 /*!40000 ALTER TABLE `hibernate_sequence` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Dumping routines for database 'uasDB'
+--
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -74,4 +107,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-05-14 11:10:13
+-- Dump completed on 2019-06-16 22:36:03

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("/categories")
 class CategoryController {
     @Autowired
     private final CategoryService categoryService
@@ -28,17 +28,17 @@ class CategoryController {
         categoryService.findById(id)
     }
 
-    @PostMapping("/categories")
+    @PostMapping("/")
     void addCategory(@RequestBody Category category) {
         categoryService.saveCategory(category)
     }
 
-    @PutMapping("/categories/{id}")
+    @PutMapping("/{id}")
     void updateCategory(@PathVariable int id, @RequestBody Category category) {
         categoryService.updateCategory(id, category)
     }
 
-    @DeleteMapping("/categories/{id}")
+    @DeleteMapping("/{id}")
     void deleteCategory(@PathVariable int id) {
         categoryService.deleteCategory(id)
     }

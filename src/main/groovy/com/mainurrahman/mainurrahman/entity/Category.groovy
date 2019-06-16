@@ -14,6 +14,13 @@ import javax.persistence.Column
 @Entity
 @Table(name = "categories")
 class Category {
+
+    public Category() {}
+
+    Category(String kd_kategori) {
+        this.kd_kategori = kd_kategori
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     Integer id
