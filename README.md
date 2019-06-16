@@ -11,6 +11,6 @@ downloaded [here](https://github.com/enobyte/UTS_J2EE/blob/master/uasDB.sql)
 Mysql -> 8.0.16
 
 ### How to Run
-- import utsDB.sql -> Mysql
+- import uasDB.sql -> Mysql
 - open Project to IntelliJ IDEA (or whatever u have IDE :D)
 - RUN |> 
